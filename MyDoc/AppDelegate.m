@@ -8,16 +8,17 @@
 
 #import "AppDelegate.h"
 
+#import "DataManager.h"
+
 @implementation AppDelegate
 
 - (void)dealloc
 {
-    [_window release];
-    [super dealloc];
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[DataManager sharedInstance] initialize];
     // Override point for customization after application launch.
     return YES;
 }
